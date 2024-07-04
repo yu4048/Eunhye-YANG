@@ -1,0 +1,160 @@
+@import url(../css/common.css);
+@import url(../css/font.css);
+
+/* ----------->> header <<----------- */
+header{
+  position: fixed;
+  width: 80px;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff58;
+  border-right: 1.5px solid #ebe6e2;
+  flex-direction: column;
+  align-self: center;
+  /* pointer-events: none; */
+}
+header p{
+  font-size: 25px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 20px;
+}
+header h1{padding-bottom: 20px;}    
+header h1 img{width:55px;} 
+
+/* Trigger ///////////////*/
+.trigger {
+  width: 3.2rem;
+  height: 2.5rem;
+  position: relative;
+  right: 3rem;
+  cursor: pointer;
+  z-index: 100;
+}
+.trigger span{
+  position: absolute;
+  width: 100%;
+  height: .4rem;
+  background-color: #434343;
+	border-radius: 5rem;
+  transition: 0.3s;
+}
+.trigger span:nth-child(1){top: 0;}
+.trigger span:nth-child(2){top: 50%;}
+.trigger span:nth-child(3){top: 100%;}
+
+.trigger.active span:nth-child(1){top: 50%;transform: rotate(45deg);}
+.trigger.active span:nth-child(2){opacity: 0;}
+.trigger.active span:nth-child(3){top: 50%;transform: rotate(-45deg);}
+
+/* Menu ///////////////*/
+.gnb_list{
+  position:fixed;
+	top:0;
+  left: -60%;
+	width:30%;
+  height: 100vh;
+	background-color:rgba(0,0,0,0.9); 
+}
+.gnb_list li:first-child{margin-top:80px;}
+.gnb_list li{padding: 10px 0;}
+.gnb_list li a{
+	display:block; 
+	font-size:16px; 
+	font-size:1rem; 
+	color:#fff; 
+	text-transform:uppercase;
+	text-align:center;
+}
+.gnb_list li a:hover{color:#3da5bb}
+
+.gnb_list li.close{ 
+	position:absolute; 
+	right:45px; 
+	top:5px; 
+}
+/* ______________________________________________ */
+#gnb{
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  display: flex;
+}
+#gnb li{
+  padding: 0 20px;
+}
+#gnb li a:hover{color: #000;}
+
+/* Dot Button */
+#dot{
+  position:fixed; 
+  z-index:999; 
+  right:5%; 
+  top:50%;
+  transform: translateY(-50%);
+}
+
+#dot span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ebe6e2;
+  margin: 20px 0;
+  cursor: pointer;
+}
+#dot span.active{
+  display: block;
+  width: 10px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Container */
+#container{
+  width:100%;
+}
+.inner{
+  width: 1200px;
+  margin: auto;
+  border: 1px solid #000;
+}
+#container h2 { 
+  font-size:250px; 
+  padding-top:70px; 
+  font-weight:100; 
+  letter-spacing:-10px; 
+}
+
+#main{
+  height: 100vh;
+  background-color: #fff;
+}
+
+#profile{
+  height: 100vh;
+  background-color: #fff;
+}
+
+#publishing{
+  height: 100vh;
+  background-color: orange;
+}
+
+#web-design{
+  height: 100vh;
+  background-color: greenyellow;
+}
+
+#web-planning{
+  height: 100vh;
+  background-color: #333;
+}
+/*  */
+
