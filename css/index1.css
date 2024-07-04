@@ -135,7 +135,7 @@ aside h1 img{width:55px;}
 }
 #main{
   height: 100vh;
-  background: url(../image/mauntain.jpg) no-repeat center /cover;
+  background: url(../image/mauntain2.jpg) no-repeat center /cover ;
 }
 #profile{
   height: 100vh;
@@ -159,7 +159,7 @@ aside h1 img{width:55px;}
   top: 150px;
   left: 0;
   height: 120px;
-  width: 300px;
+  width: 400px;
   cursor: help;
 }
 .video__content {
@@ -168,13 +168,12 @@ aside h1 img{width:55px;}
   width: 100%;
   object-fit: cover; 
   object-position: center;
-  border: 1.5px solid #000;
   border-radius: 60px;
 }
 .video:before{
   content: 'p\00a0';
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: -80px;
   font-size: 100px;
   line-height: 100px;
@@ -185,7 +184,7 @@ aside h1 img{width:55px;}
 .video:after{
   content: '\00a0rtfolio';
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 100%;
   width: 100%;
   height: 100%;
