@@ -84,11 +84,6 @@
   height: 600px;
   object-fit: contain;
   object-position: top;
-  animation: move 2s infinite ;
-}
-@keyframes move {
-  0{transform: translateY(10px);}
-  100%{transform: translateY(0);}
 }
 
 /* publishing */
