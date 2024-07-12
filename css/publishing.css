@@ -83,6 +83,12 @@
   width: 700px;
   height: 600px;
   object-fit: contain;
+  animation: ani 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes ani{
+  from{transform: translateY(0);}
+  to{transform: translateY(10px);}
 }
 
 /* publishing */
