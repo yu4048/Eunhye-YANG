@@ -115,3 +115,76 @@ function updateClock() {
 setInterval(updateClock, 1000);
 
 updateClock();
+
+// 프로필 섹션의 위치
+const profileSection = document.getElementById('profile');
+let profileOffsetTop = profileSection.offsetTop;
+
+// 각 게이지 바와 퍼센트 애니메이션 실행 함수
+function animateProgressBar(progressBar, progressPercentage, percentage) {
+  let start = 0;
+  let animationId; // requestAnimationFrame의 ID 저장 변수
+
+  function animationLoop() {
+    if (start >= percentage) {
+      cancelAnimationFrame(animationId);
+      return;
+    }
+
+    start++;
+    progressBar.style.width = `${start}%`;
+    progressPercentage.textContent = `${start}%`;
+
+    animationId = requestAnimationFrame(animationLoop);
+  }
+
+  // 초기 애니메이션 시작
+  animationId = requestAnimationFrame(animationLoop);
+}
+
+// 각 게이지 바 초기화 함수
+function resetProgressBars() {
+  const progressBar1 = document.getElementById('progress-bar-1');
+  const progressPercentage1 = document.getElementById('progress-percentage-1');
+  const progressBar2 = document.getElementById('progress-bar-2');
+  const progressPercentage2 = document.getElementById('progress-percentage-2');
+  const progressBar3 = document.getElementById('progress-bar-3');
+  const progressPercentage3 = document.getElementById('progress-percentage-3');
+
+  progressBar1.style.width = '0%';
+  progressPercentage1.textContent = '0%';
+  progressBar2.style.width = '0%';
+  progressPercentage2.textContent = '0%';
+  progressBar3.style.width = '0%';
+  progressPercentage3.textContent = '0%';
+}
+
+let animationStarted = false;
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+
+  profileOffsetTop = profileSection.offsetTop;
+
+  if (scrollPosition >= profileOffsetTop - window.innerHeight / 2) {
+    if (!animationStarted) {
+      const progressBar1 = document.getElementById('progress-bar-1');
+      const progressPercentage1 = document.getElementById('progress-percentage-1');
+      const progressBar2 = document.getElementById('progress-bar-2');
+      const progressPercentage2 = document.getElementById('progress-percentage-2');
+      const progressBar3 = document.getElementById('progress-bar-3');
+      const progressPercentage3 = document.getElementById('progress-percentage-3');
+
+      animateProgressBar(progressBar1, progressPercentage1, 90);
+      animateProgressBar(progressBar2, progressPercentage2, 85);
+      animateProgressBar(progressBar3, progressPercentage3, 70);
+
+      animationStarted = true; 
+    }
+  } else {
+    resetProgressBars();
+    animationStarted = false; 
+  }
+});
+
+resetProgressBars();

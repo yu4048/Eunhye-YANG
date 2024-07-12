@@ -9,7 +9,7 @@ aside{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
   border-right: 1px solid #000;
   flex-direction: column;
   align-self: center;
@@ -91,7 +91,6 @@ aside h1 img{width:55px;}
 	top:5px; 
 }
 
-/* Dot Button */
 #dot{
   position:fixed; 
   z-index:999; 
@@ -118,7 +117,6 @@ aside h1 img{width:55px;}
   transition: 0.5s;
 }
 
-/* Container */
 #container{
   width:100%;
 }
@@ -129,15 +127,14 @@ aside h1 img{width:55px;}
   position: relative;
   padding-top: 70px;
 }
-#container h2 { 
-  font-size:35px; 
+#container h2{
+  font-size:45px; 
   font-weight:100;
   position: absolute;
   padding-top: 30px;
   left: 0;
   text-transform: uppercase;
-  font-weight: 500;
-  font-family: "Playfair Display", serif;
+  font-weight: 400;
 }
 #main{
   height: 100vh;
@@ -151,8 +148,15 @@ aside h1 img{width:55px;}
 }
 #publishing{
   height: 100vh;
-  background-color: orange;
   position: relative;
+}
+#publishing:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../image/uphill1.jpg) no-repeat center /cover;
+  opacity: 0.5;
 }
 #web-design{
   height: 100vh;
@@ -164,6 +168,8 @@ aside h1 img{width:55px;}
   background-color: #333;
   position: relative;
 }
+
+
 /* 1-main */
 .video {
   position: relative;
@@ -210,8 +216,6 @@ aside h1 img{width:55px;}
   position: absolute;
   padding-top: 100px;
 }
-
-/* 마우스 */
 .mouseBox{
   position: absolute;
   bottom: 100px;
@@ -238,7 +242,6 @@ aside h1 img{width:55px;}
     opacity: 0;
   }
 }
-
 #main .mouse span{
   position: absolute;
   top: 10px;
@@ -247,14 +250,25 @@ aside h1 img{width:55px;}
   height: 10px;
   background-color: #fff;
   border-radius: 25px;
-  animation: mouse-ani 0.9s infinite;
+  animation: mouse-ani 1.1s infinite;
 }
 
+
 /* profile */
+#profile .inner .profilein{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%,-50%);
+  cursor: help;
+}
 #profile .profileimg{
   position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
   left: 0;
   width: 380px;
   height: 550px;
@@ -263,22 +277,147 @@ aside h1 img{width:55px;}
 }
 #profile .profilebg{
   position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
   left: 0;
   width: 380px;
   height: 550px;
   background: url(../image/mauntain.jpg)no-repeat left bottom/cover;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 10px -7px, rgba(10, 37, 64, 0.35) 0px 0px 4px 0px inset;
   border-radius: 20px;
   z-index: -1;
 }
+#profile .inner .introduction{
+  position: absolute;
+  width: 380px;
+  height: 550px;
+  left:50%;
+  transform: translateX(-50%);
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#profile .inner .introduction span{
+  width: 340px;
+  height: 20px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1.5px solid #000;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+#profile .inner .introduction span:first-child{
+  margin-top: 0;
+}
+.introduction span i{
+  font-weight: 300;
+}
+.introduction .co-ce{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 380px;
+  height: 330px;
+  bottom: 0;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 10px -7px, rgba(10, 37, 64, 0.35) 0px 0px 4px 0px inset;
+}
+.introduction .co-ce .co-ce-in .certificate{
+  margin-top: 25px;
+}
+.introduction .co-ce .co-ce-in{padding: 35px;}
+.introduction .co-ce .co-ce-in .contest h3, 
+.introduction .co-ce .co-ce-in .certificate h3{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.introduction .co-ce .co-ce-in .contest li,
+.introduction .co-ce .co-ce-in .certificate li{
+  margin-top: 6px;
+}
+.introduction .co-ce .co-ce-in .contest i,
+.introduction .co-ce .co-ce-in .certificate i{
+  font-style: normal;
+  font-weight:600;
+}
 #profile .inner .pr{
   position: absolute;
-  width: 300px;
+  top: 0;
+  width: 380px;
   height: 550px;
-  border: 1px solid #000;
-  top: 257px;
-  left:380px;
-  margin-left: 50px;
+  right: 0;
+}
+#profile .inner .pr .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 15px;
+}
+#profile .inner .pr .progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+#profile .inner .pr .progress-bar-wrapper .image{
+  width: 45px; 
+  height: 45px; 
+}
+#profile .inner .pr .progress-bar-container {
+  width: 300px; 
+  border: solid 1.2px #000;
+  border-radius: 25px;
+  position: relative;
+}
+#profile .inner .pr .progress-bar {
+  height: 20px;
+  width: 0;
+  background: linear-gradient(50deg, #4ed275, #fff);
+  border-radius: 25px;
+}
+#profile .inner .pr .progress-percentage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#profile .inner .profilein .skill-ed{
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  width: 380px;
+  height: 330px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 10px -7px, rgba(10, 37, 64, 0.35) 0px 0px 4px 0px inset;
+  display: flex;
+  justify-content: center;
+}
+.skill-ed .skill-ed-in .skill{margin-top: 25px;}
+.skill-ed .skill-ed-in{padding: 35px;}
+.skill-ed .skill-ed-in .education h3,
+.skill-ed .skill-ed-in .skill h3{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.skill-ed .skill-ed-in .education li,
+.skill-ed .skill-ed-in .skill li{
+  margin-top: 6px;
+}
+.skill-ed .skill-ed-in .skill ul{
+  display: flex;
+  column-gap: 15px;
+}
+.skill-ed .skill-ed-in .skill ul:last-child{  margin-top: 6px;}
+.skill-ed .skill-ed-in .skill li img{
+  width: 26px;
+  height: 26px;
 }

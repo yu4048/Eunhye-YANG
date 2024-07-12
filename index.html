@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2024YANGEUNHYE</title>
   <link rel="stylesheet" href="css/index1.css">
+  <link rel="stylesheet" href="css/publishing.css">
 </head>
 <body>
 
@@ -66,24 +67,117 @@
     <section id="profile" class="area">
       <div class="inner">
         <h2>profile</h2>
-        <div class="profileimg"></div>
-        <span class="profilebg"></span>
-        <div class="pr">
-          <div class="name">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="profilein">
+          <div class="profileimg"></div>
+          <span class="profilebg"></span>
+          <div class="introduction">
+            <span><b>NAME</b>&nbsp;<i class="material-symbols-outlined">
+              arrow_forward_ios
+              </i>&nbsp;양은혜</span>
+            <span><b>BIRTH</b>&nbsp;<i class="material-symbols-outlined">
+              arrow_forward_ios
+              </i>&nbsp;2003.03.11</span>
+            <span><b>EMAIL</b>&nbsp;<i class="material-symbols-outlined">
+              arrow_forward_ios
+              </i>&nbsp;nyet311@naver.com</span>
+            <div class="co-ce">
+              <div class="co-ce-in">
+                <div class="contest">
+                  <h3>contest🏆</h3>
+                  <ul>
+                    <li>제18회 황순원문학제 그림그리기대회<br>&#40;<i>가작</i>&#41;</li>
+                    <li>2021 창동골목시장 캐릭터 팬아트 공모전<br>&#40;<i>장려상</i>&#41;</li>
+                  </ul>
+                </div>
+                <div class="certificate">
+                  <h3>certificate🏅</h3>
+                  <ul>
+                    <li>GTQ(그래픽기술자격)1급</li>
+                    <li>GTQi(그래픽기술자격 일러스트)1급</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="">
-
+          <div class="pr">
+            <div class="container">
+              <div class="progress-bar-wrapper">
+                <img src="image/HTML5_logo.png" alt="Image 1" class="image"> <!-- Replace 'image1.png' with your image source -->
+                  <div class="progress-bar-container">
+                      <div id="progress-bar-1" class="progress-bar"></div>
+                      <div class="progress-percentage" id="progress-percentage-1">0%</div>
+                  </div>
+              </div>
+              <div class="progress-bar-wrapper">
+                <img src="image/CSS3_logo.png" alt="Image 2" class="image"> <!-- Replace 'image2.png' with your image source -->
+                  <div class="progress-bar-container">
+                      <div id="progress-bar-2" class="progress-bar"></div>
+                      <div class="progress-percentage" id="progress-percentage-2">0%</div>
+                  </div>
+              </div>
+              <div class="progress-bar-wrapper">
+                <img src="image/JS_logo.png" alt="Image 3" class="image"> <!-- Replace 'image3.png' with your image source -->
+                  <div class="progress-bar-container">
+                      <div id="progress-bar-3" class="progress-bar"></div>
+                      <div class="progress-percentage" id="progress-percentage-3">0%</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-ed">
+            <div class="skill-ed-in">
+              <div class="education">
+                <h3>education🏫</h3>
+                  <ul>
+                    <li><b>2024.03.12-2024.07.23&nbsp;&#40;760H&#41;<br></b>UIUX웹앱디자인(피그마[Figma])&프론트엔드(react.js) C</li>
+                    <li><b>2024.02</b>&nbsp;숭의여자대학교 시각디자인과 졸업</li>
+                  </ul>
+              </div>
+              <div class="skill">
+                <h3>sub skill💻</h3>
+                  <ul>
+                    <li><img src="image/photoshop_logo.svg" alt="photoshop"></li>
+                    <li><img src="image/illustrator_logo.svg" alt="illustrator"></li>
+                    <li><img src="image/indesign_logo.webp" alt="indesign"></li>
+                    <li><img src="image/premierepro_logo.svg" alt="premierepro"></li>
+                    <li><img src="image/aftereffect_logo.svg" alt="aftereffect"></li>
+                    <li><img src="image/github-mark.svg" alt="github"></li>
+                    <li><img src="image/figma_logo.svg" alt="figma"></li>
+                    <li><img src="image/procreate_logo.webp" alt="procreate"></li>
+                  </ul>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <section id="publishing" class="area">
-      <div class="inner">
-        <h2>publishing</h2>
+      <div class="title-h"><h2>publishing</h2></div>
+      <div class="sections-wrapper">
+        <div class="sections">
+            <section class="p-section" id="p-section1">
+                <div class="p-inner">
+                  <img src="image/onepage.png" alt="onepage">
+                  <div class="contents">
+                    
+                  </div>
+                </div>
+            </section>
+            <section class="p-section" id="p-section2">
+                <h1>Section 2</h1>
+            </section>
+            <section class="p-section" id="p-section3">
+                <h1>Section 3</h1>
+            </section>
+        </div>
+        <div class="slider-bar">
+            <div class="slider-track"></div>
+            <div class="slider-thumb" onclick="moveToSection(0)"></div>
+            <div class="slider-thumb" onclick="moveToSection(1)"></div>
+            <div class="slider-thumb" onclick="moveToSection(2)"></div>
+        </div>
       </div>
     </section>
 
@@ -106,5 +200,6 @@
 <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/index1.js"></script>
+<script src="js/publishing.js"></script>
 </body>
 </html>
