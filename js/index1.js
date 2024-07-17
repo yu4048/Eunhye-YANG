@@ -188,3 +188,35 @@ window.addEventListener('scroll', () => {
 });
 
 resetProgressBars();
+
+$(document).ready(function(){
+
+  //각 목록을 클릭했을때.....
+  $(".menu").click(function(){ 
+    $(this).next().fadeIn();
+    $("html").css({"overflow-y":"hidden"}); //모달창의 띄우는 동안은 기본브라우저의 스크롤바를 안나오게 함
+  });
+
+  //close버튼과 검정배경영역을 클릭할때.....
+  $(".close, .modal").click(function(){
+    $(".modal").fadeOut(); 
+    $("html").css({"overflow-y":"scroll"}); 
+  });
+
+});
+
+$(document).ready(function(){
+  $(".about-design").click(function(){
+      $("#modal").show();
+  });
+
+  $(".close").click(function(){
+      $("#modal").hide();
+  });
+
+  $(window).click(function(event){
+      if ($(event.target).is("#modal")) {
+          $("#modal").hide();
+      }
+  });
+});

@@ -1,3 +1,7 @@
+* {
+  font-size: 1rem;
+}
+
 .sections-wrapper {
   position: relative;
 }
@@ -9,10 +13,11 @@
   transform: translateX(-50%);
   width: 70%;
   height: 20px;
-  border-radius:50px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 0;
 }
 
 .slider-track {
@@ -35,7 +40,8 @@
   border: 2px solid rgba(255, 255, 255, 0.7);
   transition: 0.35s ease-in;
 }
-.slider-thumb:hover{
+
+.slider-thumb:hover {
   border: 2px solid #fff;
   background-color: #000;
 }
@@ -55,10 +61,12 @@
 }
 
 #p-section1 {
+  width: 100%;
   height: 100vh;
-  position: relative;
 }
+
 #p-section2 {
+  width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -67,9 +75,19 @@
   height: 100vh;
   position: relative;
 }
-.p-inner{
+
+.pset {
   width: 1200px;
-  /* border: 1px solid #000; */
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.p-inner {
+  width: 100%;
+  height: 100vh;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -77,68 +95,273 @@
   margin-top: 70px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.p-inner .mimg{
+
+.p-inner .mimg {
   width: 700px;
   height: 600px;
   object-fit: contain;
   animation: ani 0.8s infinite alternate ease-in-out;
 }
 
-@keyframes ani{
-  from{transform: translateY(0);}
-  to{transform: translateY(10px);}
+@keyframes ani {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
 }
 
 /* publishing */
-#publishing .title-h{
+#publishing .title-h {
   position: relative;
-  width:1200px;
+  width: 1200px;
   margin: auto;
 }
-#publishing h2{
+
+#publishing h2 {
   width: 100%;
   padding-top: 100px;
   position: absolute;
 }
-#publishing .p-inner .contents{
+
+#publishing .p-inner .contents {
   position: relative;
   background: #fff;
-  width: 400px;
+  padding: 32px 20px;
+  width: 440px;
   height: 550px;
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -10px, rgba(0, 0, 0, 0.3) 0px 10px 10px -7px, rgba(10, 37, 64, 0.35) 0px 0px 4px 0px inset;
-}
-/* publishing-1 */
-.p-inner .contents .weblogo1{
-  position: absolute;
-  width: 80px;
-  height: auto;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -10px,
+    rgba(0, 0, 0, 0.3) 0px 10px 10px -7px, rgba(10, 37, 64, 0.35) 0px 0px 4px 0px inset;
 }
 
-
-
-/* publishing-2 */
-.p-inner .contents .weblogo2{
-  position: absolute;
-  width: 50px;
-  height: auto;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+.con-inner {
+  height: 490px;
+  position: relative;
 }
 
+.con-inner .weblogo {
+  text-align: center;
+}
 
-/* publishing-3 */
-.p-inner .contents .weblogo3{
+.con-inner .weblogo img {
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.con-inner .web-text {
+  margin-top: 25px;
   position: absolute;
-  width: 60px;
+}
+
+.con-inner .web-text h4 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.con-inner .web-text h4 strong {
+  font-size: 20px;
+  color: orange;
+}
+
+.con-inner .web-text .btn {
+  margin-top: 20px;
+}
+
+.con-inner .web-text .btn .btn-in {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  text-align: center;
+}
+
+.con-inner .web-text .btn .btn-in li {
+  width: 120px;
+  height: 30px;
+  background-color: #2ce764;
+  line-height: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.con-inner .web-text .box {
+  padding: 20px;
+  background-color: #a0a0a022;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.con-inner .link {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+}
+
+.con-inner .link ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.con-inner .link ul li {
+  width: 195px;
+  height: 40px;
+  background-color: #3e3e3e;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  transition: 0.2s ease-in;
+}
+
+.con-inner .link ul li:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.con-inner .link .button {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background-color: #3e3e3e;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s;
+  color: rgb(129, 129, 129);
+  z-index: 0;
+}
+
+.con-inner .link .button:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: orange;
+  top: 0;
+  left: -100%;
+  transition: all 0.3s;
+}
+
+.con-inner .link .button:hover:before {
+  transform: translateX(100%);
+}
+
+.con-inner .link .button:hover {
+  color: #000;
+}
+
+.con-inner .link.pcm .pcmset {
+  display: flex;
+  justify-content: space-between;
+}
+
+.con-inner .link.pcm .button {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  width: 195px;
+  height: 40px;
+  background-color: #3e3e3e;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s;
+  color: rgb(129, 129, 129);
+  z-index: 0;
+}
+
+.con-inner .link .button:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: orange;
+  top: 0;
+  left: -100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.con-inner .link .button:hover:before {
+  transform: translateX(100%);
+}
+
+.con-inner .link .button:hover {
+  color: #000;
+}
+
+.con-inner .weblogo.shadow img {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+  object-position: center;
+}
+
+.img {
+  width: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* 이미지 클릭 시, 밝기 조절 */
+.img:hover {
+  opacity: 0.8;
+}
+
+.modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 9999; /* 모달창을 제일 앞에 두기 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* 모달창 이미지 */
+.modal_content {
+  margin: auto;
+  display: block;
+  width: 100%;
   height: auto;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 1000px;
+  animation-name: zoom;
+  animation-duration: 0.8s;
+}
+/* 모달창 애니메이션 추가 */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* 닫기 버튼 꾸미기 */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 25px;
+  transition: 0.3s;
+  background-color: #000000;
+  padding: 3px 10px;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
