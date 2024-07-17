@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/index1.css">
   <link rel="stylesheet" href="css/publishing.css">
   <link rel="stylesheet" href="css/webdesign.css">
+  <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
 
@@ -30,7 +31,7 @@
     
     <div class="gnb_list">
       <ul>
-        <li class="close"><span class="material-symbols-outlined">close</span></li>
+        <li class="close-side"><span class="material-symbols-outlined">close</span></li>
       </ul>
     </div>
   </aside>
@@ -180,7 +181,7 @@
                     <div class="link">
                       <ul>
                         <li><a href="https://github.com/nyet311/onepage" target="_blank">github</a></li>
-                        <li><a href="#none" class="about-design">about design</a></li>
+                        <li><a href="#none" class="modal-notice1">about design</a></li>
                       </ul>
                       <a class="button" href="http://one119.dothome.co.kr/" target="_blank">site view</a>
                     </div>
@@ -213,7 +214,7 @@
                     <div class="link">
                       <ul>
                         <li><a href="https://github.com/nyet311/onepage" target="_blank">github</a></li>
-                        <li><a href="#none">about design</a></li>
+                        <li><a href="#none" class="modal-notice2">about design</a></li>
                       </ul>
                       <a class="button" href="http://webd2.dothome.co.kr/" target="_blank">site view</a>
                     </div>
@@ -246,7 +247,7 @@
                     <div class="link pcm">
                       <ul>
                         <li><a href="https://github.com/yu4048/web" target="_blank">github</a></li>
-                        <li><a href="#none">about design</a></li>
+                        <li><a href="#none" class="modal-notice3">about design</a></li>
                       </ul>
                       <div class="pcmset">
                         <a class="button" href="https://yu4048.github.io/web/" target="_blank">PC view</a>
@@ -282,6 +283,46 @@
     </section>
   </div>
 
+      <!-- Modal Contents -->
+    <div class="modal md1">
+      <div class="modal-content md1">
+        <div class="modal-body">
+          <img src="image/modal1.png" alt="modal1">
+        </div>
+        <div class="modal-btn">
+          <p class="close"><span class="material-symbols-outlined">close</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal md2">
+      <div class="modal-content md1">
+        <div class="modal-body">
+          <img src="image/modal2.png" alt="modal1">
+        </div>
+        <div class="modal-btn">
+          <p class="close"><span class="material-symbols-outlined">close</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal md3">
+      <div class="modal-content md1">
+        <div class="modal-body">
+          <img src="image/modal3.png" alt="modal1">
+        </div>
+        <div class="modal-btn">
+          <p class="close"><span class="material-symbols-outlined">close</span></p>
+        </div>
+      </div>
+    </div>
+    
+    
+
+				
+
+    
+
+  
+
 
 <!-- Script Source -->
 <script src="js/jquery-3.7.0.min.js"></script>
@@ -289,6 +330,7 @@
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/index1.js"></script>
 <script src="js/publishing.js"></script>
+<script src="js/modal.js"></script>
 <script>
   function MM_openBrWindow(theURL,winName,features){ 
     window.open(theURL,winName,features);

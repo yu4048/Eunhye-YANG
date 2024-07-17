@@ -1,0 +1,50 @@
+/* Modal with target selector */
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  overflow: hidden; 
+  overflow-y:auto; 
+  z-index: 9999; 
+}
+
+.modal-content { 
+  width: 1000px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+.modal-content .modal-body img {
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+/*버튼영역*/ 
+.modal-btn{
+	/* border: 1px solid red; */
+	position:absolute;
+	left:100%;
+	top:30px;
+	width:130px;
+	height:50px;
+	text-align:center;
+	z-index:200;
+  color: #ffffff;
+}
+.modal-btn span{cursor: pointer;}
+.modal-btn .close{
+  background-color: #000;
+  width:130px;
+	height:50px;
+}
+.close span{
+  font-size: 50px;
+  font-weight: 300;
+}

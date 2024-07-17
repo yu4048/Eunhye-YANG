@@ -79,7 +79,7 @@ $(document).ready(function(){
     $(".gnb_list").stop(true,true).animate({left:0});
   });
 
-  $(".gnb_list .close").click(function(){  
+  $(".gnb_list .close-side").click(function(){  
     $(".gnb_list").stop(true,true).animate({left:"-60%"});
   });	
   
@@ -205,18 +205,3 @@ $(document).ready(function(){
 
 });
 
-$(document).ready(function(){
-  $(".about-design").click(function(){
-      $("#modal").show();
-  });
-
-  $(".close").click(function(){
-      $("#modal").hide();
-  });
-
-  $(window).click(function(event){
-      if ($(event.target).is("#modal")) {
-          $("#modal").hide();
-      }
-  });
-});
