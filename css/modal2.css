@@ -1,0 +1,112 @@
+.items{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.item_list{ 
+	width: 1200px;
+	margin: auto;  
+	box-sizing:border-box;
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+	align-items: center;
+	gap: 30px;
+  /* border: 1px solid #000; */
+  position: relative;
+  top: 50px;
+}
+.item_list li{
+	width:250px; 
+	height:200px; 
+	background-color:orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.item_list li a{
+	font-size:30px;
+	font-weight:bold;
+	color:#fff;
+}
+
+
+/* POPUP BOX ---------------------*/
+
+.popup-box{ /*검정배경*/
+	display:none; 
+  position: fixed;
+	left:0; 
+	top:0;
+	width:100%; 
+	height:100vh; 
+	background:rgba(0,0,0,0.7); 
+  overflow: hidden; 
+  overflow-y:auto; 
+  z-index: 9999; 
+}
+
+.modalBox{
+	position: relative;
+	width: 1100px;
+	min-height: 100%;
+	margin: auto;
+}
+
+/*각 목록별 나오는 모달팝업 내용 나오는 부분*/
+.modal-contents{ 
+	/* border: 5px solid #000; */
+	position:absolute;
+	width:1100px;
+	min-height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+/*   background-color:#fff; */
+}
+.modal-contents img {
+  width: 1100px;
+  display: block;
+  margin: 0 auto;
+}
+.modal-contents>li{
+	display:none;
+	text-align:center;
+}
+
+
+/*버튼영역*/ 
+.modal-button{
+	/* border: 1px solid red; */
+	position:absolute;
+	left:100%;
+	top:30px;
+	width:130px;
+	height:auto;
+	color:#fff;
+	text-align:center;
+	z-index:200;
+  background-color: black;
+}
+.modal-button span{cursor: pointer;}
+
+.close-button{
+	border-bottom:1px solid #fff;
+	padding: 10px;
+}
+.close-button span{font-size: 50px;}
+.lr-btn{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+.lr-btn span{font-size: 28px;}
+.g_page{ 
+	font-size:12px;
+	color:#fff;
+	width:130px;
+	padding-top:10px;
+	height:50px;
+	text-align:center;
+}
