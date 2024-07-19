@@ -37,44 +37,62 @@ $(document).ready(function(){
   
 });
 
-
 $(document).ready(function(){
 
   //각 목록을 클릭했을때.....
   $(".item_list2>li").click(function(){
     g_pop=$(this).index();
 
-    $(".gp2 span:nth-child(1)").text(g_pop+1);  //오른쪽 상단 페이지번호
+    $(".g_page2 span:nth-child(1)").text(g_pop+1);  //오른쪽 상단 페이지번호
     $("html").css({"overflow-y":"hidden"}); //기존 html 스크롤 숨기기
-    $(".mc2>li").eq(g_pop).fadeIn();  //각 목록의 내용
-    $(".pb2").stop().fadeIn(); //검정배경
+    $(".modal-contents2>li").eq(g_pop).fadeIn();  //각 목록의 내용
+    $(".popup-box2").stop().fadeIn(); //검정배경
   });
 
   //이전다음버튼....
-  $(".pr2").click(function(){
+  $(".pre2").click(function(){
     if(g_pop>0){
-      $(".mc2>li").eq(g_pop).hide();
+      $(".modal-contents2>li").eq(g_pop).hide();
       g_pop--;
-      $(".gp2 span:nth-child(1)").text(g_pop+1);
-			$(".mc2>li").eq(g_pop).stop().show();
+      $(".g_page2 span:nth-child(1)").text(g_pop+1);
+			$(".modal-contents2>li").eq(g_pop).stop().show();
     };
   });
-  $(".nx2").click(function(){
-    if(g_pop<4){
-      $(".mc2>li").eq(g_pop).hide();
+  $(".next2").click(function(){
+    if(g_pop<7){
+      $(".modal-contents2>li").eq(g_pop).hide();
       g_pop++;
-      $(".gp2 span:nth-child(1)").text(g_pop+1);
-			$(".mc2>li").eq(g_pop).stop().show();
+      $(".g_page2 span:nth-child(1)").text(g_pop+1);
+			$(".modal-contents2>li").eq(g_pop).stop().show();
     };
   });
 
   //닫기버튼.....
-  $(".cb2").click(function(){
+  $(".close-button2").click(function(){
     $("html").css({"overflow-y":"scroll"}); 
-    $(".pb2").stop().fadeOut();
-		$(".mc2>li").stop().fadeOut();
+    $(".popup-box2").stop().fadeOut();
+		$(".modal-contents2>li").stop().fadeOut();
   });
   
 });
 
+// 페이지 진입 시 기본 값
+window.addEventListener('DOMContentLoaded', function() {
+  showContent('A');
+});
 
+function showContent(content) {
+  var contentA = document.getElementById("contentA");
+  var contentB = document.getElementById("contentB");
+
+  // 내용 숨김
+  contentA.style.display = "none";
+  contentB.style.display = "none";
+
+  // 선택한 내용 보이기
+  if (content === "A") {
+    contentA.style.display = "block";
+  } else if (content === "B") {
+    contentB.style.display = "block";
+  }
+}
