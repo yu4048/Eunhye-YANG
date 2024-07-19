@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2024YANGEUNHYE</title>
+  <style>
+    .hidden {
+        display: none;
+    }
+</style>
   <link rel="stylesheet" href="css/index1.css">
   <link rel="stylesheet" href="css/publishing.css">
   <link rel="stylesheet" href="css/webdesign.css">
@@ -276,20 +281,37 @@
 
     <section id="web-design" class="area">
     <div class="title-h"><h2>web design</h2></div>
-    <div class="items">
-      <div class="item">
-        <ul class="item_list">
-          <li><a href="#none">01</a></li>
-          <li><a href="#none">02</a></li>
-          <li><a href="#none">03</a></li>
-          <li><a href="#none">04</a></li>
-          <li><a href="#none">05</a></li>
-          <li><a href="#none">06</a></li>
-          <li><a href="#none">07</a></li>
-          <li><a href="#none">08</a></li>
-        </ul>
-      </div>
-    </div>	
+    <button id="button1">버튼1</button>
+    <button id="button2">버튼2</button>
+    <div id="content1">
+      <div class="items">
+          <div class="item">
+              <ul class="item_list">
+                  <li><a href="#none">01</a></li>
+                  <li><a href="#none">02</a></li>
+                  <li><a href="#none">03</a></li>
+                  <li><a href="#none">04</a></li>
+                  <li><a href="#none">05</a></li>
+                  <li><a href="#none">06</a></li>
+                  <li><a href="#none">07</a></li>
+                  <li><a href="#none">08</a></li>
+              </ul>
+          </div>
+      </div>	
+    </div>
+    <div id="content2" class="hidden">
+      <div class="items2">
+          <div class="item2">
+              <ul class="item_list2">
+                  <li><a href="#none">09</a></li>
+                  <li><a href="#none">10</a></li>
+                  <li><a href="#none">11</a></li>
+                  <li><a href="#none">12</a></li>
+                  <li><a href="#none">13</a></li>
+              </ul>
+          </div>
+      </div>	
+    </div>
     </section>
 
     <section id="web-planning" class="area">
@@ -354,14 +376,26 @@
         </div>				
       </div>			
     </div>
+
+    <div class="pb2">
+      <div class="mb2">
+        <ul class="mc2">
+          <li><img src="image/modal01.png" alt="modal09"></li>
+          <li><img src="image/modal02.png" alt="modal08"></li>
+          <li><img src="image/modal03.png" alt="modal09"></li>
+          <li><img src="image/modal04.png" alt="modal10"></li>
+        </ul>	
+        <div class="mbtn2">
+          <p class="cb2"><span class="material-symbols-outlined">close</span></p>
+          <div class="lb2">
+            <p class="pr2"><span class="material-symbols-outlined">arrow_back_ios</span></p>
+            <p class="nx2"><span class="material-symbols-outlined">arrow_forward_ios</span></p>
+          </div>
+          <p class="gp2"><span>1</span> / <span>5</span></p>
+        </div>				
+      </div>			
+    </div>
     
-
-				
-
-    
-
-  
-
 
 <!-- Script Source -->
 <script src="js/jquery-3.7.0.min.js"></script>
@@ -375,6 +409,17 @@
   function MM_openBrWindow(theURL,winName,features){ 
     window.open(theURL,winName,features);
   }
+</script>
+<script>
+  document.getElementById('button1').addEventListener('click', function() {
+      document.getElementById('content1').classList.remove('hidden');
+      document.getElementById('content2').classList.add('hidden');
+  });
+
+  document.getElementById('button2').addEventListener('click', function() {
+      document.getElementById('content1').classList.add('hidden');
+      document.getElementById('content2').classList.remove('hidden');
+  });
 </script>
 </body>
 </html>
