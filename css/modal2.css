@@ -35,7 +35,7 @@
 .item_list li{
 	width:250px; 
 	height:200px; 
-	background-color:orange;
+	background-color:rgb(169, 169, 169);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -134,21 +134,21 @@
 	align-items: center;
 }
 .item_list2{ 
-	width: 1200px;
+	width: 1100px;
 	margin: auto;  
 	box-sizing:border-box;
 	display: flex;
 	flex-wrap: wrap;
-  justify-content: center;
-	align-items: center;
 	gap: 30px;
   position: relative;
   top: 300px;
+	align-items: center;
+	justify-content: center;
 }
 .item_list2 li{
 	width:250px; 
 	height:200px; 
-	background-color:orange;
+	background-color:rgb(169, 169, 169);
 	display: flex;
 	justify-content: center;
 	align-items: center;
