@@ -35,7 +35,19 @@ $(document).ready(function(){
 		$(".modal-contents>li").stop().fadeOut();
   });
   
+  // 탭 버튼 클릭 시 active 클래스 추가 및 제거
+  $("#buttonA").click(function() {
+    $(this).addClass("active");
+    $("#buttonB").removeClass("active");
+  });
+
+  $("#buttonB").click(function() {
+    $(this).addClass("active");
+    $("#buttonA").removeClass("active");
+  });
+
 });
+
 
 $(document).ready(function(){
 
@@ -96,3 +108,5 @@ function showContent(content) {
     contentB.style.display = "block";
   }
 }
+
+

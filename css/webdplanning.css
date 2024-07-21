@@ -1,0 +1,32 @@
+.planning-in{
+  border: 1px solid #000;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.planning-box{
+	width: 1200px;
+	margin: auto;  
+	box-sizing:border-box;
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+	align-items: center;
+	gap: 70px;
+  /* border: 1px solid #000; */
+  position: relative;
+  top: 250px;
+}
+.p-box{
+  width:352px; 
+	height:500px; 
+	background-color:rgb(169, 169, 169);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 8px;
+}
