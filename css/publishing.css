@@ -305,23 +305,3 @@
   object-fit: contain;
   object-position: center;
 }
-
-
-
-/* 닫기 버튼 꾸미기 */
-/* .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #ffffff;
-  font-size: 25px;
-  transition: 0.3s;
-  background-color: #000000;
-  padding: 3px 10px;
-}
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-} */

@@ -1,5 +1,4 @@
 .planning-in{
-  border: 1px solid #000;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -19,14 +18,80 @@
   top: 250px;
 }
 .p-box{
-  width:352px; 
-	height:500px; 
-	background-color:rgb(169, 169, 169);
+  width:340px; 
+	height:450px; 
+	background-color:rgba(255, 255, 255, 0.6);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 8px;
+  border-radius: 12px 12px 0 0;
+	transition: 0.2s ease-in-out;
+}
+.p-box:hover{	background-color:rgb(255, 255, 255)}
+.p-box .cover{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background-color:#000;
+	bottom: 0;
+	left: 0;
+	cursor: default;
+}
+.p-box .cover ul{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.p-box .cover li{
+	position: relative;
+	width: 80%;
+	margin-top: 20px;
+	text-align: center;
+	padding: 5px 10px;
+	background-color: #fff;
+	transition: 0.2s ease-in;
+	cursor: pointer;
+}
+.p-box .cover li a{
+	font-size: 18px;
+	font-weight: 600;
+}
+.p-box .cover li:hover{background-color:  #2ce764;}
+.p-box .cover li:first-child{margin-top: 0;}
+.p-box:before{
+	position: absolute;
+	content: '📁';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 120px;
+	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+.p-box:hover:before{
+	content: '📂';
+}
+.p-title{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 25px;
+	font-family: SUITE_B, sans-serif;
 }
